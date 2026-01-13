@@ -1,9 +1,6 @@
 package com.hyungsuu.apigate.samaple.web;
 
 
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.http.HttpStatus;
@@ -14,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.hyungsuu.apigate.samaple.service.UserService;
 import com.hyungsuu.apigate.samaple.vo.JwtTokenReqVo;
 import com.hyungsuu.apigate.samaple.vo.JwtTokenResVo;
 import com.hyungsuu.common.exception.GlobalException;
@@ -34,13 +30,12 @@ import lombok.extern.slf4j.Slf4j;
 public class JwtController {
 
 	
-	@Autowired
-    private UserService templetService;
+
 	@Autowired
 	private JwtTokenUtil jwtTokenUtil;
 
-	@Autowired
-	MessageSource messageSource;
+//	@Autowired
+//	private MessageSource messageSource;
 
   
     /**
