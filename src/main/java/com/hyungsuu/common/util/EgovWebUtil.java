@@ -1,14 +1,8 @@
 package com.hyungsuu.common.util;
 
 import java.util.regex.Pattern;
-
-
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.http.HttpRequest;
-
 import jakarta.servlet.http.HttpServletRequest;
+import lombok.extern.slf4j.Slf4j;
 
 
 /**
@@ -22,10 +16,9 @@ import jakarta.servlet.http.HttpServletRequest;
  *   2011.10.10  한성곤           최초 생성
  * </pre>
  */
-
+@Slf4j
 public class EgovWebUtil {
 	
-	private static Logger log = LoggerFactory.getLogger(EgovWebUtil.class);
 	
 	public static String clearXSSMinimum(String value) {
 		if (value == null || value.trim().equals("")) {

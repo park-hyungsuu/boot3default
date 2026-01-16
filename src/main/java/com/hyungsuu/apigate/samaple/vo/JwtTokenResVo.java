@@ -16,7 +16,4 @@ public class JwtTokenResVo extends BaseResponseVo implements Serializable {
 	@NotNull
 	@Schema(description = "응답 메세지",example = "Sample Value", requiredMode = Schema.RequiredMode.REQUIRED)
 	private String jwtToken;
-
-
-
 }

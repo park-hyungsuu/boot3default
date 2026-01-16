@@ -1,20 +1,17 @@
 package com.hyungsuu.common.util;
 
 import java.util.List;
-import java.util.Locale;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 
 import com.hyungsuu.common.exception.GlobalException;
 import com.hyungsuu.common.vo.BaseResponseVo;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class CommonUtil {
 
-	
-	private static final Logger log = LoggerFactory.getLogger(CommonUtil.class);
 	/**
 	 * Request BindingResult를 분석하여 Binding 에러 발생 시 "요청 파라미터 검증 실패" 관련 상세 응답 메세지를 생성하여 예외를 발생시킨다.
 

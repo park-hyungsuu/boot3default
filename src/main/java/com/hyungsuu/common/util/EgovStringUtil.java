@@ -39,6 +39,8 @@ import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
 
+import lombok.extern.slf4j.Slf4j;
+@Slf4j
 public class EgovStringUtil {
 	/**
 	 * 빈 문자열 <code>""</code>.

@@ -1,26 +1,23 @@
 package com.hyungsuu.apigate.samaple.service.impl;
 
-import java.sql.SQLException;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import com.hyungsuu.apigate.samaple.dao.CommonDAO;
 import com.hyungsuu.apigate.samaple.service.UserService;
 import com.hyungsuu.apigate.samaple.vo.UserReqVo;
 import com.hyungsuu.apigate.samaple.vo.UserResVo;
 import com.hyungsuu.common.exception.GlobalException;
+import com.hyungsuu.common.util.JwtTokenUtil;
 
 import lombok.extern.slf4j.Slf4j;
-
-
 
 @Slf4j
 @Service("userService")
@@ -91,7 +88,7 @@ public class UserServiceImpl implements UserService {
 			log.info("GlobalException ==>" +"||"+e.getMessage() +"||"+e.toString() );
 			throw e;
 		}
-	
+
 		return rtnMap;
 	}
 
@@ -113,7 +110,7 @@ public class UserServiceImpl implements UserService {
 			log.info("GlobalException ==>" +"||"+e.getMessage() +"||"+e.toString() );
 			throw e;
 		}
-	
+
 		return rtnMap;
 	}
 
