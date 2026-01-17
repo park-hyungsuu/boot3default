@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
+import com.hyungsuu.common.interceptor.AuthenticInterceptor;
 import com.hyungsuu.common.util.TimeUtil;
 
 import org.slf4j.Logger;
@@ -17,6 +18,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 // boot ver2 javax.servlet.Filter를 사용하는 경우
 //import javax.servlet.Filter;
@@ -82,17 +84,14 @@ import lombok.RequiredArgsConstructor;
 //
 //}
 
-
-@RequiredArgsConstructor
+@Slf4j
 @Component
 public class InitMDCFilter extends OncePerRequestFilter {
 
   private FilterConfig config;
-  
-  private String mdcName = "SID";
-  
-  private static final Logger log = LoggerFactory.getLogger(InitMDCFilter.class);
 
+  private String mdcName ="SID";
+  
    
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
