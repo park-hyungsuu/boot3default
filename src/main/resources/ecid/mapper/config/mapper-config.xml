@@ -12,7 +12,5 @@
 	</settings>
 	
 <typeAliases>
-	<typeAlias type="com.hyungsuu.apigate.samaple.vo.UserReqVo" alias="userReqVo"/>
-	<typeAlias type="com.hyungsuu.apigate.samaple.vo.JwtTokenReqVo" alias="jwtTokenReqVo"/>
 </typeAliases>
 </configuration>
