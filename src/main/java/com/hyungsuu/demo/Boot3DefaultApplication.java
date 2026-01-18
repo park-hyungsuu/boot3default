@@ -11,15 +11,15 @@ import org.springframework.context.support.ReloadableResourceBundleMessageSource
 
 @ComponentScan(basePackages = {"com.hyungsuu"})
 @SpringBootApplication
-public class DemoApplication extends SpringBootServletInitializer {
+public class Boot3DefaultApplication extends SpringBootServletInitializer {
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(DemoApplication.class);
+		return application.sources(Boot3DefaultApplication.class);
 	}
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(Boot3DefaultApplication.class, args);
 	}
 	
 	@Bean
