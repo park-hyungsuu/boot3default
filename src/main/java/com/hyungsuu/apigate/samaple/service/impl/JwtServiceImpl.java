@@ -77,7 +77,7 @@ public class JwtServiceImpl implements JwtService {
 		
 //		Date date = new Date(System.currentTimeMillis());
 		long date = System.currentTimeMillis();
-		jwtToken = JwtTokenUtil.generateToken(refreshTokenReqVo.getUserId(), (String)rtnMap.get("userAuth"), jwtExpTime,date);
+		jwtToken = JwtTokenUtil.generateToken(refreshTokenReqVo.getUserId(), (String)rtnMap.get("userAuth"), jwtExpTime, date);
 		jwtTokenResVo.setJwtToken(jwtToken);
 
 		return jwtTokenResVo;
