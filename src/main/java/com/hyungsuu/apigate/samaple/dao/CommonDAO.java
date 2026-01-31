@@ -8,5 +8,4 @@ import com.hyungsuu.common.mapper.EgovAbstractMapper;
 @Repository
 public class CommonDAO extends EgovAbstractMapper {
 
-
 }
